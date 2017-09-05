@@ -6,18 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>chenx的博客</title>
+  <title>Spring整合导出Excle和PDF | chenx的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="想要改变自己">
-<meta property="og:type" content="website">
-<meta property="og:title" content="chenx的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="导出excle表格 添加依赖使用apache的开源框架POI 12345&amp;lt;dependency&amp;gt;            &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt;            &amp;lt;artifactId&amp;gt;poi&amp;lt;/artifactId&amp;gt;            &amp;lt;version&amp;gt;3.16&amp;lt;/v">
+<meta name="keywords" content="java,spring,导出文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring整合导出Excle和PDF">
+<meta property="og:url" content="http://yoursite.com/2017/09/05/Spring整合导出Excle和PDF/index.html">
 <meta property="og:site_name" content="chenx的博客">
-<meta property="og:description" content="想要改变自己">
+<meta property="og:description" content="导出excle表格 添加依赖使用apache的开源框架POI 12345&amp;lt;dependency&amp;gt;            &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt;            &amp;lt;artifactId&amp;gt;poi&amp;lt;/artifactId&amp;gt;            &amp;lt;version&amp;gt;3.16&amp;lt;/v">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3905877-09b230f2d790aa6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3905877-d70e840fc9675604.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3905877-772431f33e2abaf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3905877-2e0cd2087532a87c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3905877-aa0e7154415126a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-09-05T09:45:20.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chenx的博客">
-<meta name="twitter:description" content="想要改变自己">
+<meta name="twitter:title" content="Spring整合导出Excle和PDF">
+<meta name="twitter:description" content="导出excle表格 添加依赖使用apache的开源框架POI 12345&amp;lt;dependency&amp;gt;            &amp;lt;groupId&amp;gt;org.apache.poi&amp;lt;/groupId&amp;gt;            &amp;lt;artifactId&amp;gt;poi&amp;lt;/artifactId&amp;gt;            &amp;lt;version&amp;gt;3.16&amp;lt;/v">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3905877-09b230f2d790aa6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="chenx的博客" type="application/atom+xml">
   
@@ -157,100 +165,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-全代码配置SSH框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Spring整合导出Excle和PDF" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/05/全代码配置SSH框架/">全代码配置SSH框架</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/05/全代码配置SSH框架/" class="archive-article-date">
-  	<time datetime="2017-09-05T09:03:27.667Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="全代码配置web-xml"><a href="#全代码配置web-xml" class="headerlink" title="全代码配置web.xml"></a>全代码配置web.xml</h2><p>编写类WebConfig.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> javax.servlet.Filter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.filter.CharacterEncodingFilter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.filter.HiddenHttpMethodFilter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;</div><div class="line"><span class="comment">//Servlet3开始可以用代码取代web.xml的配置</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfig</span> <span class="keyword">extends</span> <span class="title">AbstractAnnotationConfigDispatcherServletInitializer</span> </span>&#123;</div><div class="line">	<span class="comment">//Spring IOC容器的配置类</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Class&lt;?&gt;[] getRootConfigClasses() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Class&lt;?&gt;[]&#123;AppConfig.class&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//Spring MVC的配置类</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Class&lt;?&gt;[] getServletConfigClasses() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Class&lt;?&gt;[]&#123;MvcConfig.class&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//前端控制器的映射</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> String[] getServletMappings() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> String[]&#123;<span class="string">"/"</span>&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//过滤器配置</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Filter[] getServletFilters() &#123;</div><div class="line">		CharacterEncodingFilter encodingFilter = <span class="keyword">new</span> CharacterEncodingFilter(<span class="string">"utf-8"</span>);</div><div class="line">		encodingFilter.setForceEncoding(<span class="keyword">true</span>);</div><div class="line">		HiddenHttpMethodFilter restFilter = <span class="keyword">new</span> HiddenHttpMethodFilter();</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Filter[]&#123;encodingFilter,restFilter&#125;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/09/05/全代码配置SSH框架/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">全代码配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/05/全代码配置SSH框架/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring整合导出Excle和PDF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/05/Spring整合导出Excle和PDF/">Spring整合导出Excle和PDF</a>
+    <h1 class="article-title" itemprop="name">
+      Spring整合导出Excle和PDF
     </h1>
   
 
@@ -274,11 +196,73 @@
 <blockquote>
 <p><strong>BeanNameViewResolver</strong>:自定义视图，通过视图名解析</p>
 </blockquote>
-        
-          <a class="article-more-a" href="/2017/09/05/Spring整合导出Excle和PDF/#more">more >></a>
-        
+<a id="more"></a>
+<ul>
+<li><p>编写自定义的excel视图</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.chenx.domain.District;</div><div class="line"><span class="keyword">import</span> org.apache.commons.beanutils.BeanUtils;</div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFCell;</div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFRow;</div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFSheet;</div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFWorkbook;</div><div class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Workbook;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.view.document.AbstractXlsView;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</div><div class="line"><span class="keyword">import</span> java.net.URLEncoder;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"><span class="keyword">import</span> java.util.Map;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Created by ChenX on 2017/8/13.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="comment">//想要导出excel,需要继承AbstractXlsView(office2007之前的版本依然可以识别)</span></div><div class="line"><span class="comment">// ，AbstractXlsxView(office2007版之后的版本才能打开)，为了满足大部分人，选择第一种继承</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistrictExcelView</span> <span class="keyword">extends</span> <span class="title">AbstractXlsView</span> </span>&#123;</div><div class="line">	<span class="comment">//重写方法</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">buildExcelDocument</span><span class="params">(Map&lt;String, Object&gt; model,</span></span></div><div class="line"><span class="function"><span class="params">									  Workbook workbook,</span></span></div><div class="line"><span class="function"><span class="params">									  HttpServletRequest request,</span></span></div><div class="line"><span class="function"><span class="params">									  HttpServletResponse response)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		<span class="comment">//url中传中文必须转成%编码才能识别</span></div><div class="line">		String filename = URLEncoder.encode(<span class="string">"省市表格.xls"</span>,<span class="string">"utf-8"</span>);</div><div class="line">		response.setHeader(<span class="string">"Content-Disposition"</span>,<span class="string">"attachment; filename="</span>+filename);</div><div class="line">		HSSFWorkbook book = (HSSFWorkbook) workbook;<span class="comment">//对应一个excel文件</span></div><div class="line">		HSSFSheet sheet = book.createSheet(<span class="string">"省市区汇总"</span>);<span class="comment">//在webbook中添加一个sheet,对应Excel文件中的sheet</span></div><div class="line">		HSSFRow row = sheet.createRow(<span class="number">0</span>);<span class="comment">//设置表头第0行</span></div><div class="line">		String[] colNames = &#123;<span class="string">"省名字"</span>,<span class="string">"市名字"</span>,<span class="string">"地区名字"</span>&#125;;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; colNames.length ; i++) &#123;</div><div class="line">			HSSFCell cell = row.createCell(i);</div><div class="line">			cell.setCellValue(colNames[i]);</div><div class="line">		&#125;</div><div class="line">		List&lt;District&gt; districts = (List&lt;District&gt;) model.get(<span class="string">"districts"</span>);</div><div class="line">		<span class="keyword">int</span> rowIndex = <span class="number">1</span>;<span class="comment">//第0行是表头，所以设置从第一行开始</span></div><div class="line">		String[] propNames = &#123; <span class="string">"city.province.name"</span>, <span class="string">"city.name"</span>, <span class="string">"name"</span> &#125;;</div><div class="line">		<span class="keyword">for</span> (District district : districts</div><div class="line">				) &#123;</div><div class="line">			HSSFRow sheetRow = sheet.createRow(rowIndex);</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; propNames.length; i++) &#123;</div><div class="line">				HSSFCell cell = sheetRow.createCell(i);</div><div class="line">				<span class="comment">//使用反射取值</span></div><div class="line">				cell.setCellValue(BeanUtils.getProperty(district,propNames[i]));</div><div class="line">			&#125;</div><div class="line">			rowIndex++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编写控制器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GetMapping</span>(<span class="string">"/exp"</span>)</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">exportDistricts</span><span class="params">(ModelMap map)</span> </span>&#123;</div><div class="line">		List&lt;District&gt; districts = distService.listAllDistricts();</div><div class="line">		map.put(<span class="string">"districts"</span>, districts);</div><div class="line">		<span class="keyword">return</span> <span class="string">"distExcel"</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>直接访问地址<br><img src="http://upload-images.jianshu.io/upload_images/3905877-09b230f2d790aa6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="excel"></p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3905877-d70e840fc9675604.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="excel"><br>内容如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3905877-772431f33e2abaf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="excel"></p>
+<h2 id="PDF文档"><a href="#PDF文档" class="headerlink" title="PDF文档"></a>PDF文档</h2><ul>
+<li><p>添加依赖<br>itext的版本最新已经是5.x了，但是要在spring中使用itex只能支持使用2.x的版本</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.lowagie<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>itext<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>springmvc中配置自定义视图</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 命名解析器 --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 1. BeanNameViewResolver --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.springframework.web.servlet.view.BeanNameViewResolver"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"order"</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 自定义视图 --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 2. Custom View --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"distPdf"</span> <span class="attr">class</span>=<span class="string">"com.chenx.view.DistrictPdfView"</span> /&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>编写自定义的PDF视图</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.chenx.domain.District;</div><div class="line"><span class="keyword">import</span> com.chenx.utils.PDFUtil;</div><div class="line"><span class="keyword">import</span> com.lowagie.text.*;</div><div class="line"><span class="keyword">import</span> com.lowagie.text.pdf.PdfPTable;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.lowagie.text.pdf.PdfWriter;</div><div class="line"><span class="keyword">import</span> org.apache.commons.beanutils.BeanUtils;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.view.document.AbstractPdfView;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</div><div class="line"><span class="keyword">import</span> java.net.URLEncoder;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"><span class="keyword">import</span> java.util.Map;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Created by ChenX on 2017/8/13.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistrictPdfView</span> <span class="keyword">extends</span> <span class="title">AbstractPdfView</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String title_content = <span class="string">"省市区详情"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String[] table_head = &#123;<span class="string">"省名字"</span>,<span class="string">"市名字"</span>,<span class="string">"区名字"</span>&#125;;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">buildPdfDocument</span><span class="params">(Map&lt;String, Object&gt; model,</span></span></div><div class="line"><span class="function"><span class="params">									Document document,</span></span></div><div class="line"><span class="function"><span class="params">									PdfWriter writer,</span></span></div><div class="line"><span class="function"><span class="params">									HttpServletRequest request,</span></span></div><div class="line"><span class="function"><span class="params">									HttpServletResponse response)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		String filename = URLEncoder.encode(<span class="string">"省市区详情.pdf"</span>,<span class="string">"utf-8"</span>);</div><div class="line">		response.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"inline; filename="</span> + filename);</div><div class="line">		document.open();</div><div class="line">		<span class="comment">//标题</span></div><div class="line">		Paragraph title = PDFUtil.getParagraph(</div><div class="line">				<span class="keyword">new</span> Chunk(title_content,<span class="keyword">new</span> Font(PDFUtil.bfChinese,<span class="number">16</span>,Font.BOLD)));</div><div class="line">		title.setAlignment(Paragraph.ALIGN_CENTER);</div><div class="line">		document.add(title);</div><div class="line">		<span class="comment">//表格标题</span></div><div class="line">		PdfPTable table = <span class="keyword">new</span> PdfPTable(table_head.length);</div><div class="line">		table.setSpacingBefore(<span class="number">20</span>);</div><div class="line">		table.setSpacingAfter(<span class="number">30</span>);</div><div class="line">		<span class="keyword">for</span> (String str: table_head</div><div class="line">			 ) &#123;</div><div class="line">			table.addCell(PDFUtil.getParagraph(str));</div><div class="line">		&#125;</div><div class="line">		String[] propNames = &#123;<span class="string">"city.province.name"</span>, <span class="string">"city.name"</span>, <span class="string">"name"</span>&#125;;</div><div class="line">		<span class="comment">//表格内容</span></div><div class="line">		List&lt;District&gt; distList = (List&lt;District&gt;) model.get(<span class="string">"districts"</span>);</div><div class="line">		<span class="keyword">if</span> (<span class="keyword">null</span>!=distList)&#123;</div><div class="line">			<span class="keyword">for</span> (District district:distList</div><div class="line">					) &#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; propNames.length; i++) &#123;</div><div class="line">					String content = BeanUtils.getProperty(district, propNames[i]);</div><div class="line">					table.addCell(PDFUtil.getParagraph(content));</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		document.add(table);</div><div class="line">		document.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>因为itex默认是不支持中文字体的，所以必须给它添加中文字体，用了一个PDFUtil工具类封装了字体，样式等功能</p>
+</blockquote>
+<ul>
+<li><p>PDFUtil工具类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.lowagie.text.Chunk;</div><div class="line"><span class="keyword">import</span> com.lowagie.text.DocumentException;</div><div class="line"><span class="keyword">import</span> com.lowagie.text.Font;</div><div class="line"><span class="keyword">import</span> com.lowagie.text.Paragraph;</div><div class="line"><span class="keyword">import</span> com.lowagie.text.pdf.BaseFont;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"><span class="keyword">import</span> java.util.Map;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PDFUtil</span> </span>&#123;</div><div class="line">	<span class="comment">// 对参数的封装形式比如&#123;name&#125;</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String BEGIN = <span class="string">"&#123;"</span>;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String END = <span class="string">"&#125;"</span>;</div><div class="line">	<span class="comment">// 换行形式&#123;#&#125;</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String NEW_LINE = <span class="string">"#"</span>;</div><div class="line">	<span class="comment">// 默认的行间距、首行距离等，自己添加</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">float</span> DEFAULT_LEADING = <span class="number">20</span>;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">float</span> DEFAULT_LINE_INDENT = <span class="number">30</span>;</div><div class="line"></div><div class="line"></div><div class="line">	<span class="comment">// 基本字体和样式</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> BaseFont bfChinese;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> Font fontChinese;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> Font UNDER_LINE = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">static</span>&#123;</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="comment">// SIMKAI.TTF 默认系统语言，这里没使用第三方语言包</span></div><div class="line">			<span class="comment">//bfChinese = BaseFont.createFont(PDFTest.class.getResource("/content/")+"SIMKAI.TTF",BaseFont.IDENTITY_H,BaseFont.NOT_EMBEDDED);</span></div><div class="line">			bfChinese = BaseFont.createFont(<span class="string">"c:/Windows/Fonts/STXINWEI.TTF"</span>,BaseFont.IDENTITY_H,<span class="keyword">true</span>);</div><div class="line"></div><div class="line">			fontChinese = <span class="keyword">new</span> Font(bfChinese, <span class="number">14</span>, Font.NORMAL);</div><div class="line">			UNDER_LINE = <span class="keyword">new</span> Font(bfChinese, <span class="number">14</span>,Font.UNDERLINE);</div><div class="line">		&#125; <span class="keyword">catch</span> (DocumentException e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 默认样式</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Paragraph <span class="title">getParagraph</span><span class="params">(String context)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> getParagraph(context,fontChinese);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Paragraph <span class="title">getParagraph</span><span class="params">(Chunk chunk)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Paragraph(chunk);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 指定字体样式</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Paragraph <span class="title">getParagraph</span><span class="params">(String context,Font font)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Paragraph(context,font);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 获得新行,首行缩进,和行间距</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Paragraph <span class="title">getNewParagraph</span><span class="params">(String context,<span class="keyword">float</span> fixedLeading,<span class="keyword">float</span> firstLineIndent)</span></span>&#123;</div><div class="line">		Paragraph p = getParagraph(context);</div><div class="line">		p.setLeading(fixedLeading);</div><div class="line">		p.setFirstLineIndent(firstLineIndent);</div><div class="line">		<span class="keyword">return</span> p;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Paragraph <span class="title">getParagraph</span><span class="params">(String content , Font font , <span class="keyword">float</span> fixedLeading , <span class="keyword">int</span> alignment)</span></span>&#123;</div><div class="line">		Paragraph p = getParagraph(content);</div><div class="line">		p.setFont(font);</div><div class="line">		p.setLeading(fixedLeading);</div><div class="line">		p.setAlignment(alignment);</div><div class="line">		<span class="keyword">return</span> p;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 默认段落样式</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Paragraph <span class="title">getDefaultParagraph</span><span class="params">(String context)</span></span>&#123;</div><div class="line">		Paragraph p = getParagraph(context);</div><div class="line">		<span class="comment">// 默认行间距</span></div><div class="line">		p.setLeading(DEFAULT_LEADING);</div><div class="line">		<span class="comment">// 默认首行空隙</span></div><div class="line">		p.setFirstLineIndent(DEFAULT_LINE_INDENT);</div><div class="line">		<span class="keyword">return</span> p;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 将参数和字符串内容组合成集合</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Paragraph&gt; <span class="title">createParagraphs</span><span class="params">(String context , Map&lt;String,Object&gt; map)</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">		List&lt;Paragraph&gt; list = <span class="keyword">new</span> ArrayList&lt;Paragraph&gt;();</div><div class="line">		Paragraph p = getDefaultParagraph(<span class="keyword">null</span>);</div><div class="line">		<span class="keyword">while</span>((index  = context.indexOf(BEGIN)) &gt; -<span class="number">1</span>)&#123;</div><div class="line">			String text = context.substring(<span class="number">0</span>,index);</div><div class="line">			context = context.substring(index, context.length());</div><div class="line">			index = context.indexOf(END);</div><div class="line">			String param =  <span class="keyword">null</span>;</div><div class="line">			<span class="keyword">if</span>(index &gt; <span class="number">0</span>)&#123;</div><div class="line">				param = context.substring(BEGIN.length(),index);</div><div class="line">			&#125;</div><div class="line">			p.add(text);</div><div class="line">			<span class="keyword">if</span>(!NEW_LINE.equals(param))&#123;</div><div class="line">				Object value = map.get(param);</div><div class="line">				<span class="keyword">if</span>(value != <span class="keyword">null</span>)&#123;</div><div class="line">					p.add(<span class="keyword">new</span> Chunk(value.toString(),UNDER_LINE));</div><div class="line">				&#125;<span class="keyword">else</span>&#123;</div><div class="line">					p.add(<span class="keyword">new</span> Chunk(<span class="string">""</span>));</div><div class="line">				&#125;</div><div class="line">			&#125;<span class="keyword">else</span>&#123;</div><div class="line">				list.add(p);</div><div class="line">				p = getDefaultParagraph(<span class="keyword">null</span>);</div><div class="line">				p.setSpacingBefore(<span class="number">0</span>);</div><div class="line">			&#125;</div><div class="line">			context = context.substring(index+END.length(),context.length());</div><div class="line">		&#125;</div><div class="line">		list.add(p);</div><div class="line">		list.add(getParagraph(context));</div><div class="line">		<span class="keyword">return</span> list;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>编写控制器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GetMapping</span>(<span class="string">"/pdf"</span>)</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">exportDistrictsToPdf</span><span class="params">(ModelMap map)</span> </span>&#123;</div><div class="line">		List&lt;District&gt; districts = distService.listAllDistricts();</div><div class="line">		map.put(<span class="string">"districts"</span>, districts);</div><div class="line">		<span class="keyword">return</span> <span class="string">"distPdf"</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>因为设置了内联打开，所以直接访问url会在浏览器打开，如下</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3905877-2e0cd2087532a87c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="pdf"></p>
+<ul>
+<li>在PDF中输出图片<br>在刚刚的自定义视图中添加如下代码<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">document.newPage();</div><div class="line">		<span class="comment">//添加图片</span></div><div class="line">		String path = request.getServletContext().getRealPath(<span class="string">"/images"</span>) + <span class="string">"/"</span> + <span class="string">"mm.jpg"</span>;</div><div class="line">		<span class="keyword">try</span> (InputStream in = <span class="keyword">new</span> FileInputStream(path)) &#123;</div><div class="line">			<span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[in.available()];</div><div class="line">			in.read(buffer);</div><div class="line">			<span class="comment">// URL url = new URL("https://www.baidu.com/img/bd_logo1.png");</span></div><div class="line">			Image image = Image.getInstance(buffer);</div><div class="line">			image.scaleToFit(PageSize.A4.getWidth(), PageSize.A4.getHeight());</div><div class="line">			document.add(image);</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>结果如下：（第二页显示图片）</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3905877-aa0e7154415126a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第二页显示图片"></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -306,16 +290,79 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/05/Spring整合导出Excle和PDF/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/05/Spring整合导出Excle和PDF/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/09/05/全代码配置SSH框架/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          全代码配置SSH框架
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -335,8 +382,14 @@
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -359,8 +412,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

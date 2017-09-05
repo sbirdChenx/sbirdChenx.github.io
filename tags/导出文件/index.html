@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>chenx的博客</title>
+  <title>Tag: 导出文件 | chenx的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="想要改变自己">
 <meta property="og:type" content="website">
 <meta property="og:title" content="chenx的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/导出文件/index.html">
 <meta property="og:site_name" content="chenx的博客">
 <meta property="og:description" content="想要改变自己">
 <meta property="og:locale" content="zh-Hans">
@@ -159,131 +159,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-全代码配置SSH框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/05/全代码配置SSH框架/">全代码配置SSH框架</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/05/全代码配置SSH框架/" class="archive-article-date">
-  	<time datetime="2017-09-05T09:03:27.667Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-05</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="全代码配置web-xml"><a href="#全代码配置web-xml" class="headerlink" title="全代码配置web.xml"></a>全代码配置web.xml</h2><p>编写类WebConfig.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> javax.servlet.Filter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.filter.CharacterEncodingFilter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.filter.HiddenHttpMethodFilter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;</div><div class="line"><span class="comment">//Servlet3开始可以用代码取代web.xml的配置</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfig</span> <span class="keyword">extends</span> <span class="title">AbstractAnnotationConfigDispatcherServletInitializer</span> </span>&#123;</div><div class="line">	<span class="comment">//Spring IOC容器的配置类</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Class&lt;?&gt;[] getRootConfigClasses() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Class&lt;?&gt;[]&#123;AppConfig.class&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//Spring MVC的配置类</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Class&lt;?&gt;[] getServletConfigClasses() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Class&lt;?&gt;[]&#123;MvcConfig.class&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//前端控制器的映射</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> String[] getServletMappings() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> String[]&#123;<span class="string">"/"</span>&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//过滤器配置</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Filter[] getServletFilters() &#123;</div><div class="line">		CharacterEncodingFilter encodingFilter = <span class="keyword">new</span> CharacterEncodingFilter(<span class="string">"utf-8"</span>);</div><div class="line">		encodingFilter.setForceEncoding(<span class="keyword">true</span>);</div><div class="line">		HiddenHttpMethodFilter restFilter = <span class="keyword">new</span> HiddenHttpMethodFilter();</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Filter[]&#123;encodingFilter,restFilter&#125;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/09/05/全代码配置SSH框架/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
+    
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">全代码配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/05/全代码配置SSH框架/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring整合导出Excle和PDF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/05/Spring整合导出Excle和PDF/">Spring整合导出Excle和PDF</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/05/Spring整合导出Excle和PDF/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/09/05/Spring整合导出Excle和PDF/" class="archive-article-date">
   	<time datetime="2017-09-05T09:01:07.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-05</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="导出excle表格"><a href="#导出excle表格" class="headerlink" title="导出excle表格"></a>导出excle表格</h2><ul>
-<li><p>添加依赖<br>使用apache的开源框架POI</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>springmvc中配置<br>springmvc配置自定义的视图解析器</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 命名解析器 --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 1. BeanNameViewResolver --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.springframework.web.servlet.view.BeanNameViewResolver"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"order"</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 自定义视图 --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 2. Custom View --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"distExcel"</span> <span class="attr">class</span>=<span class="string">"com.qfedu.house.view.DistrictExcelView"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p><strong>BeanNameViewResolver</strong>:自定义视图，通过视图名解析</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/09/05/Spring整合导出Excle和PDF/#more">more >></a>
-        
-      
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/09/05/Spring整合导出Excle和PDF/">Spring整合导出Excle和PDF</a>
+    </h1>
+  
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -303,41 +206,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/05/Spring整合导出Excle和PDF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -359,10 +240,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

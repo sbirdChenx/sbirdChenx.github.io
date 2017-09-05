@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>chenx的博客</title>
+  <title>全代码配置SSH框架 | chenx的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="想要改变自己">
-<meta property="og:type" content="website">
-<meta property="og:title" content="chenx的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="全代码配置web.xml编写类WebConfig.java12345678910111213141516171819202122232425262728293031import javax.servlet.Filter;import org.springframework.web.filter.CharacterEncodingFilter;import org.springframework.w">
+<meta name="keywords" content="java,spring,全代码配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全代码配置SSH框架">
+<meta property="og:url" content="http://yoursite.com/2017/09/05/全代码配置SSH框架/index.html">
 <meta property="og:site_name" content="chenx的博客">
-<meta property="og:description" content="想要改变自己">
+<meta property="og:description" content="全代码配置web.xml编写类WebConfig.java12345678910111213141516171819202122232425262728293031import javax.servlet.Filter;import org.springframework.web.filter.CharacterEncodingFilter;import org.springframework.w">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-05T09:46:45.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chenx的博客">
-<meta name="twitter:description" content="想要改变自己">
+<meta name="twitter:title" content="全代码配置SSH框架">
+<meta name="twitter:description" content="全代码配置web.xml编写类WebConfig.java12345678910111213141516171819202122232425262728293031import javax.servlet.Filter;import org.springframework.web.filter.CharacterEncodingFilter;import org.springframework.w">
   
     <link rel="alternative" href="/atom.xml" title="chenx的博客" type="application/atom+xml">
   
@@ -157,16 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-全代码配置SSH框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-全代码配置SSH框架" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/05/全代码配置SSH框架/">全代码配置SSH框架</a>
+    <h1 class="article-title" itemprop="name">
+      全代码配置SSH框架
     </h1>
   
 
@@ -180,11 +180,42 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="全代码配置web-xml"><a href="#全代码配置web-xml" class="headerlink" title="全代码配置web.xml"></a>全代码配置web.xml</h2><p>编写类WebConfig.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> javax.servlet.Filter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.filter.CharacterEncodingFilter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.filter.HiddenHttpMethodFilter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;</div><div class="line"><span class="comment">//Servlet3开始可以用代码取代web.xml的配置</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfig</span> <span class="keyword">extends</span> <span class="title">AbstractAnnotationConfigDispatcherServletInitializer</span> </span>&#123;</div><div class="line">	<span class="comment">//Spring IOC容器的配置类</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Class&lt;?&gt;[] getRootConfigClasses() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Class&lt;?&gt;[]&#123;AppConfig.class&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//Spring MVC的配置类</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Class&lt;?&gt;[] getServletConfigClasses() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Class&lt;?&gt;[]&#123;MvcConfig.class&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//前端控制器的映射</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> String[] getServletMappings() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> String[]&#123;<span class="string">"/"</span>&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//过滤器配置</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="keyword">protected</span> Filter[] getServletFilters() &#123;</div><div class="line">		CharacterEncodingFilter encodingFilter = <span class="keyword">new</span> CharacterEncodingFilter(<span class="string">"utf-8"</span>);</div><div class="line">		encodingFilter.setForceEncoding(<span class="keyword">true</span>);</div><div class="line">		HiddenHttpMethodFilter restFilter = <span class="keyword">new</span> HiddenHttpMethodFilter();</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Filter[]&#123;encodingFilter,restFilter&#125;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/09/05/全代码配置SSH框架/#more">more >></a>
-        
+<a id="more"></a>
+<h2 id="配置SpringMVC"><a href="#配置SpringMVC" class="headerlink" title="配置SpringMVC"></a>配置SpringMVC</h2><p>编写MvcConfig.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.ViewResolver;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.EnableWebMvc;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.view.InternalResourceViewResolver;</div><div class="line"><span class="keyword">import</span> org.springframework.web.servlet.view.JstlView;</div><div class="line"><span class="comment">//相当于是springmvc-servlet.xml</span></div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="meta">@EnableWebMvc</span></div><div class="line"><span class="meta">@ComponentScan</span>(<span class="string">"com.chenx.controller"</span>)<span class="comment">//写单例对象的前提是无状态对象</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MvcConfig</span> </span></div><div class="line"><span class="class">	<span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span> </span>&#123;</div><div class="line">	<span class="comment">//静态资源交给DefaultServlet处理</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configureDefaultServletHandling</span><span class="params">(DefaultServletHandlerConfigurer configurer)</span> </span>&#123;</div><div class="line">		<span class="comment">// TODO Auto-generated method stub</span></div><div class="line">		configurer.enable();</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//视图解析器</span></div><div class="line">	<span class="meta">@Bean</span><span class="comment">//@Scope(创建对象的方式)@Primary(首选项)</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ViewResolver <span class="title">jspViewResolver</span><span class="params">()</span></span>&#123;</div><div class="line">		InternalResourceViewResolver viewResolver = </div><div class="line">				<span class="keyword">new</span> InternalResourceViewResolver();</div><div class="line">		viewResolver.setViewClass(JstlView.class);</div><div class="line">		viewResolver.setPrefix(<span class="string">"/WEB-INF/jsp/"</span>);</div><div class="line">		viewResolver.setSuffix(<span class="string">".jsp"</span>);</div><div class="line">		<span class="keyword">return</span> viewResolver;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="配置Spring"><a href="#配置Spring" class="headerlink" title="配置Spring"></a>配置Spring</h2><p>编写类AppConfig.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Properties;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javax.sql.DataSource;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.hibernate.SessionFactory;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> org.springframework.orm.hibernate5.HibernateTransactionManager;</div><div class="line"><span class="keyword">import</span> org.springframework.orm.hibernate5.LocalSessionFactoryBean;</div><div class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.EnableTransactionManagement;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.alibaba.druid.pool.DruidDataSource;</div><div class="line"></div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="meta">@EnableTransactionManagement</span></div><div class="line"><span class="meta">@ComponentScan</span>(<span class="string">"com.qfedu"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppConfig</span> </span>&#123;</div><div class="line">    <span class="comment">//DataSource 对象</span></div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> DataSource <span class="title">getDataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">		DruidDataSource dataSource = <span class="keyword">new</span> DruidDataSource();</div><div class="line">		dataSource.setUrl(<span class="string">"jdbc:mysql://localhost:3306/hr?useUnicode=true&amp;characterEncoding=utf8"</span>);</div><div class="line">		dataSource.setUsername(<span class="string">"root"</span>);</div><div class="line">		dataSource.setPassword(<span class="string">"123456"</span>);</div><div class="line">		dataSource.setMinIdle(<span class="number">10</span>);</div><div class="line">		dataSource.setInitialSize(<span class="number">10</span>);</div><div class="line">		dataSource.setMaxActive(<span class="number">100</span>);</div><div class="line">		<span class="keyword">return</span> dataSource;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//SessionFactory对象</span></div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> LocalSessionFactoryBean <span class="title">getSessionFactory</span><span class="params">(DataSource dataSource)</span> </span>&#123;</div><div class="line">		LocalSessionFactoryBean bean = <span class="keyword">new</span> LocalSessionFactoryBean();</div><div class="line">		bean.setDataSource(dataSource);</div><div class="line">		bean.setPackagesToScan(<span class="string">"com.chenx.model"</span>);</div><div class="line">		Properties hibernateProperties = <span class="keyword">new</span> Properties();</div><div class="line">		hibernateProperties.setProperty(<span class="string">"hibernate.dialect"</span>, <span class="string">"org.hibernate.dialect.MySQL5Dialect"</span>);</div><div class="line">		hibernateProperties.setProperty(<span class="string">"hibernate.show_sql"</span>, <span class="string">"true"</span>);</div><div class="line">		hibernateProperties.setProperty(<span class="string">"hibernate.format_sql"</span>, <span class="string">"true"</span>);</div><div class="line">		bean.setHibernateProperties(hibernateProperties);</div><div class="line">		<span class="keyword">return</span> bean;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//配置事务</span></div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> HibernateTransactionManager <span class="title">getTxManager</span><span class="params">(SessionFactory sessionFactory)</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> HibernateTransactionManager(sessionFactory);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<ol>
+<li>@Configuration:相当于xml文件中的<beans></beans></li>
+<li>@Bean:相当于xml文件中的<bean></bean></li>
+<li>@EnableWebMvc 启用Spring MVC支持</li>
+<li>@ComponentScan(“com.qfedu”)–注解类查找规则定义 <context:component-scan></context:component-scan></li>
+<li>@EnableTransactionManagement开启注解式事务的支持</li>
+</ol>
+</blockquote>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -212,16 +243,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/05/全代码配置SSH框架/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/05/全代码配置SSH框架/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/05/Spring整合导出Excle和PDF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring整合导出Excle和PDF</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -241,102 +331,14 @@
 
 
 
-
   
-    <article id="post-Spring整合导出Excle和PDF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/05/Spring整合导出Excle和PDF/">Spring整合导出Excle和PDF</a>
-    </h1>
   
 
-        
-        <a href="/2017/09/05/Spring整合导出Excle和PDF/" class="archive-article-date">
-  	<time datetime="2017-09-05T09:01:07.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="导出excle表格"><a href="#导出excle表格" class="headerlink" title="导出excle表格"></a>导出excle表格</h2><ul>
-<li><p>添加依赖<br>使用apache的开源框架POI</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>springmvc中配置<br>springmvc配置自定义的视图解析器</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 命名解析器 --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 1. BeanNameViewResolver --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.springframework.web.servlet.view.BeanNameViewResolver"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"order"</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 自定义视图 --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 2. Custom View --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"distExcel"</span> <span class="attr">class</span>=<span class="string">"com.qfedu.house.view.DistrictExcelView"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p><strong>BeanNameViewResolver</strong>:自定义视图，通过视图名解析</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/09/05/Spring整合导出Excle和PDF/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">导出文件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/05/Spring整合导出Excle和PDF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -359,8 +361,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
